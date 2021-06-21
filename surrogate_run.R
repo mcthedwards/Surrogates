@@ -107,7 +107,7 @@ for (i in 1:S) {
               var.LSD.g)
 }
 
-TS.95 = apply(TS, 2, quantile, probs = 0.95)  # Compute critival value
+TS.95 = apply(TS, 2, quantile, probs = 0.95)  # Compute critical value
 TS.orig >= TS.95  # Reject or not?
 
 proc.time() - ptm

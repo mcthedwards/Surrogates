@@ -3,6 +3,7 @@ library(fields)
 
 surrogate = function(y) {
   
+  # Creates stationary surrogate from time series
   n = length(y)
   i = complex(real = 0, imaginary = 1)
   
@@ -30,6 +31,7 @@ spectrogram = function(data,
                        plot = FALSE,
                        type = "ar") {
   
+  # Spectrogram function
   # fs: Sampling frequency
   
   n = length(data)
@@ -134,6 +136,7 @@ KL = function(p1, p2) {
 
 LSD = function(p1, p2) {
   
+  # Computes log spectral distance
   D = sum(abs(log(p1) - log(p2)))
   
   return(D)
